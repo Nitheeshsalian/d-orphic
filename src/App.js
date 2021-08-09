@@ -7,6 +7,7 @@ import {
   ListGroup,
   Button,
   Card,
+  Alert
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
@@ -18,6 +19,7 @@ function App() {
   const [mg, setMg] = useState(0);
   const [ca, setCa] = useState(0);
   const [vol, setVol] = useState(0);
+  const [show, setShow] = useState(false);
 
   const [firstCalmg, setFirstCalmg] = useState(0);
   const [firsts, setFirsts] = useState(0);
@@ -35,6 +37,10 @@ function App() {
 
   const calculate = (event) => {
     event.preventDefault();
+    if( n==0 || p ==0 || k ==0 || mg ==0 || ca ==0 || vol == 0 ){
+      setShow(true);
+      return;
+    }
     console.log(n);
     const _firstCalcMg = (mg * vol * 100) / (9.8 * 1000);
     const _secondCalca = (ca * 100 * vol) / (18.8 * 1000);
@@ -66,6 +72,18 @@ function App() {
     setFifths(((_fifth * 17 * 1000) / (100 * vol)).toFixed(2));
   };
 
+  const showAlert = () => {
+    if(show){
+      return (
+        <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+          <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+          <p>
+           Please enter all values
+          </p>
+        </Alert>
+      );
+    }
+  }
   return (
     <Container>
       <Form onSubmit={calculate}>
@@ -147,7 +165,7 @@ function App() {
           </Button>
         </Row>
       </Form>
-
+      {showAlert()}
       <Card body style={{marginTop: 50}}>
         <div>1. First Calc for Mg (Ist Part) = {firstCalmg} gram</div>
         <div>You will get S = {firsts} ppm</div>
