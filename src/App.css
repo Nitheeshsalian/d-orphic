@@ -32,7 +32,37 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.flexcenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.widget {
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: #fff;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.btn {
+  padding: 8px 32px !important;
+  font-size: .875rem !important;
+  font-weight: 600 !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem!important;
+}
+
+.mr10 {
+  margin-right: 10px;
 }
