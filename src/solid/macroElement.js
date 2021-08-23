@@ -1,5 +1,4 @@
 import {
-  Container,
   Row,
   Form,
   Col,
@@ -24,12 +23,15 @@ function MacroElement() {
   const [firstCalmg, setFirstCalmg] = useState(0);
   const [firsts, setFirsts] = useState(0);
   const [secondCalca, setSecondCalCa] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [secondn, setSecondN] = useState(0);
 
   const [thirdn, setThirdn] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [thirdk, setThirdk] = useState(0);
 
   const [fouthp, setFouthp] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [fouthk, setFouthk] = useState(0);
 
   const [fifthk, setFifthk] = useState(0);
@@ -37,7 +39,7 @@ function MacroElement() {
 
   const calculate = (event) => {
     event.preventDefault();
-    if (n == 0 && p == 0 && k == 0 && mg == 0 && ca == 0 && vol == 0) {
+    if (n === 0 && p === 0 && k === 0 && mg === 0 && ca === 0 && vol === 0) {
       setShow(true);
       return;
     }
