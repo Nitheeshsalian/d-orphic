@@ -1,12 +1,12 @@
 import { Form, Row, Col, Card, ListGroup, Button } from "react-bootstrap";
 import "./macro.css";
 import { useState } from "react";
-const ZN = 3000;
-const FE = 2500;
-const MN = 1000;
-const CU = 1000;
-const B = 500;
-const MO = 100;
+// const ZN = 3000;
+// const FE = 2500;
+// const MN = 1000;
+// const CU = 1000;
+// const B = 500;
+// const MO = 100;
 
 function Micronutrients() {
   const [vol, setVol] = useState(0);
@@ -17,6 +17,15 @@ function Micronutrients() {
   const [b, setB] = useState(0);
   const [cu, setCu] = useState(0);
   const [mo, setMo] = useState(0);
+
+  //consts
+  const [ZN, setZN] = useState(3000);
+  const [FE, setFE] = useState(2500);
+  const [MN, setMN] = useState(1000);
+  const [CU, setCU] = useState(1000);
+  const [MO, setMO] = useState(100);
+  const [B, setBo] = useState(500);
+
   const [micronutrients, setMicronutrients] = useState(0);
 
   const calculate = (event) => {
@@ -63,6 +72,85 @@ function Micronutrients() {
                 placeholder="Enter N"
                 value={ppm}
                 onChange={(e) => setPpm(e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+        </Row>
+        <h3>Enter values in Micronutrients in packets</h3>
+        <Row>
+          <Col>
+            <Form.Group controlId="">
+              <Form.Label>Enter value of ZN</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter ZN"
+                value={ZN}
+                onChange={(e) => setZN(e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group controlId="">
+              <Form.Label>
+                Enter value of FE 
+              </Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter FE"
+                value={FE}
+                onChange={(e) => setFE(e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group controlId="">
+              <Form.Label>
+                Enter value of MN 
+              </Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter MN"
+                value={MN}
+                onChange={(e) => setMN(e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Form.Group controlId="">
+              <Form.Label>Enter value of CU</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter CU"
+                value={CU}
+                onChange={(e) => setCU(e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group controlId="">
+              <Form.Label>
+                Enter value of MO 
+              </Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter MO"
+                value={MO}
+                onChange={(e) => setMO(e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group controlId="">
+              <Form.Label>
+                Enter value of B 
+              </Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter B"
+                value={B}
+                onChange={(e) => setBo(e.target.value)}
               />
             </Form.Group>
           </Col>
