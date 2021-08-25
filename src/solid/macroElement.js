@@ -199,9 +199,6 @@ function MacroElement() {
         <Card.Body>
           <ListGroup>
             <ListGroup.Item variant="warning">
-              Yoiu will get S {fifths > 0 ? fifths + firsts : firsts} ppm
-            </ListGroup.Item>
-            <ListGroup.Item variant="warning">
               Take {firstCalmg >= 0 ? firstCalmg : 0} gram MgSO4.7H2O (Epsom
               salt)
             </ListGroup.Item>
@@ -220,7 +217,7 @@ function MacroElement() {
           </ListGroup>
         </Card.Body>
         <Card.Footer style={{ fontWeight: "bold" }}>
-          And Dissolve it in {vol} Liters water
+          And Dissolve it in {vol} Liters water.   You will get S {fifths > 0 ? fifths + firsts : firsts} ppm
         </Card.Footer>
       </Card>
     </div>
