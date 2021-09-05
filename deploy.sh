@@ -11,7 +11,7 @@ echo "Copying build folder"
 echo "-------------------------------------------"
 
 # Copy 
-cp /home/nitheesh/workspace/d-orphic/public/*  /home/nitheesh/workspace/firebase/public
+cp -r /home/nitheesh/workspace/d-orphic/build/.  /home/nitheesh/workspace/firebase/public
 
 echo "Deploying project"
 
